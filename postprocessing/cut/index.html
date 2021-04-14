@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Merge Tool</title>
+    <link rel="stylesheet" href="./css/button.css">
+    <link href="./css/cutlist.css" rel="stylesheet" />
+  </head>
+  <body>
+      <table>
+          
+          <td valign="top"> <table style="float:right">
+              <table style="float:left">
+                  <h1> Cut</h1>
+                  <div style="display: table !important;">
+                    <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "srcbtn">
+                      Browse Input File
+                    </button>
+                    <p style="display:table-cell !important;"><u id="src-file">Choose File</u><p/>
+                  </div>
+                  <div style="display: table !important;">
+                    <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "dstbtn">
+                      Browse Output Directory
+                    </button>
+                    <p style="display:table-cell !important;"><u id="dst-directory">Choose Directory</u><p/>
+                  </div>
+
+                  <div class = "container">
+                      <div style="display: table !important;">
+                        <button style="display:table-cell !important;width:7em;text-align:center;margin:5px;padding: 15px 0px;" class="button" id = "back">Back</button>
+                        <button style="display:table-cell !important;width:7em;text-align:center;margin:5px;padding: 15px 0px;" class="button" id = "play">Play</button>
+                        <button style="display:table-cell !important;width:7em;text-align:center;margin:5px;padding: 15px 0px;" class="button" id = "forward">Forward</button>
+                      </div>
+                      <div style="display: table !important;">
+                        <button style="display:table-cell !important;width:7em;text-align:center;margin:5px;padding: 15px 0px;" class="button" id = "cut">Add cut</button>
+                        <div style="display: table !important;"></div>
+                        <label id="debug"></label>
+                      </div>
+                      </div>
+                  </table>
+          </td>
+          <td valign="top"> <table style="float:right">
+              
+              <h1> Cuts</h1>
+              <div style="display: table !important;">
+                  <div class="scrollbar">
+                  <ol id="mylist">
+                  </ol>  
+                  
+                </div>
+              <tr>
+              <label for="start_frame">From:</label>
+              <input type="number" id="start_frame" name="start_frame" min="1" style="width:7em;"></div>
+
+              <label for="end_frame">To:</label>
+              <input type="number" id="end_frame" name="end_frame" min="1" style="width:7em;"></div>
+
+              <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id = "edit_frames">
+                  Edit
+                </button>
+              </tr>
+              <div style="display: table !important;">
+                <button style="display:table-cell !important;width:7em;margin-right:10px;" class="button" id = "copy">
+                  Copy
+                </button>
+                <button style="display:table-cell !important;width:7em;margin-right:10px;" class="button" id = "delete">
+                    Delete
+                  </button>
+              </div>
+
+              <div style="display: table !important;">
+                <button style="display:table-cell !important;width:6em;height:2em;text-align:center;padding:0px;" class="button" id = "up">
+                  Move up
+                </button>
+                <button style="display:table-cell !important;width:6em;height:2em;text-align:center;padding:0px;" class="button" id = "down">
+                    Move down
+                  </button>
+
+              <div style="display: table !important;">
+                <label id="debug">Select the clips to include</label>
+              </div>
+            </iv>
+                <button style="display:table-cell !important;width:7em;height:2em;text-align:center;padding:0px;" class="button" id = "exclude">
+                  Exclude/Include
+                </button>
+              </div>
+              <div>
+                <button style="display:table-cell !important;width:6em;height:2em;text-align:center;padding:0px;" class="button" id = "generate">
+                  Generate
+                </button>
+              </div>
+            </div>
+           </table>
+          </td>
+              
+          <td valign="top"> 
+            
+            <table style="float:right"> 
+                <tr>
+              <h1 id="editing_frame"> Add text:</h1>
+              
+              </tr>
+              <tr>
+              <img id=cut_image src='' />
+            </tr>
+            <tr>
+
+                <div style="display: table !important;">
+                    <label for="text_to_add">Text:</label>
+          <input type="text" id="text_to_add" name="text_to_add">
+
+          <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id = "text_add">
+              Add
+            </button>
+              <form>
+                  <input type="radio" name="topbottom" id="idT" value="top" checked> Top
+                  <input type="radio" name="topbottom" id="idB" value="btm"> Bottom
+              </form>
+
+              <br><br>
+
+              <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id ="text_left">
+                  Left
+                </button>
+                <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id ="text_right">
+                    Right
+                  </button>
+              <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id ="text_up">
+                  Up
+                </button>
+                <button style="display:table-cell !important;width:4em;height:2em;text-align:center;padding:0px;" class="button" id ="text_down">
+                    Down
+                  </button>
+
+                <div style="display: table !important;">
+              
+              </div>
+              </tr>
+
+            </div>
+            
+           </table>
+          </td>
+        </tr>
+        
+          </table>
+ 
+
+   
+      <br><br> 
+    
+  <br><br> 
+
+  
+
+    <script src="./index_renderer.js"></script>
+  </body>
+</html>

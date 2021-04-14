@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Merge Tool</title>
+    <link rel="stylesheet" href="./css/button.css">
+  </head>
+  <body>
+    <div class = "container">
+      <h1> Merge videos in the selected subfolder. </h1>
+      <div style="display: table !important;">
+        <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "srcbtn">
+          Browse Input Directory
+        </button>
+        <p style="display:table-cell !important;"><u id="src-directory">Choose Directory</u><p/>
+      </div>
+      <div style="display: table !important;">
+        <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "dstbtn">
+          Browse Output Directory
+        </button>
+        <p style="display:table-cell !important;"><u id="dst-directory">Choose Directory</u><p/>
+      </div>
+      <br><br> 
+      <div>
+        <input type="checkbox" id="onefile" value="onefile" checked>Merge to one file</checkbox>
+    </div>
+    <h4> Merging top-bottom, select top video: </h4>
+    <form>
+      <input type="radio" name="top" id="idR" value="right" checked> Right
+      <input type="radio" name="top" id="idL" value="left"> Left
+  </form>
+  <br><br> 
+      <button class="button" id = "merge">Merge!</button>
+    <script src="./index_renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Debayering Tool</title>
+    <link rel="stylesheet" href="./css/button.css">
+  </head>
+  <body>
+    <div class = "container">
+      <h1> Debayer videos </h1>
+      <div style="display: table !important;">
+        <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "srcbtn">
+          Browse Input Directory
+        </button>
+        <p style="display:table-cell !important;"><u id="src-directory">Choose Directory</u><p/>
+      </div>
+      <div style="display: table !important;">
+        <button style="display:table-cell !important;width:15em;margin-right:10px;" class="button" id = "dstbtn">
+          Browse Output Directory
+        </button>
+        <p style="display:table-cell !important;"><u id="dst-directory">Choose Directory</u><p/>
+      </div>
+      <button class="button" id = "debayer">Debayer!</button>
+    <script src="./index_renderer.js"></script>
+  </body>
+</html>

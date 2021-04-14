@@ -1,0 +1,24 @@
+{
+  "name": "debayering-tool",
+  "version": "1.0.0",
+  "description": "Debayer your video files with this electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/majstenmark/stereo2.git"
+  },
+  "devDependencies": {
+    "electron": "^6.0.6"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "@rauschma/stringio": "1.4.0"
+  },
+
+  "author": "Maj Stenmark",
+  "license": "GNU GPLv3"
+}

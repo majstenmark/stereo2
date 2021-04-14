@@ -1,0 +1,22 @@
+{
+  "name": "postprocessing-tool",
+  "version": "1.0.0",
+  "description": "Create a evaluation video with this application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/majstenmark/stereo2.git"
+  },
+  "devDependencies": {
+    "electron": "^6.1.9"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "@rauschma/stringio": "1.4.0"
+  },
+  "author": "Maj Stenmark",
+  "license": "GNU GPLv3"
+}

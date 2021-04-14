@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+**/node_modules
+**/bin
+*.mp4
+liveview/LUT
+*.class
+**/__pycache__
+*.pyc
+*.data
+*.log

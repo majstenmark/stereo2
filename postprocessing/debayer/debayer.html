@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Debayering Tool</title>
+    <link rel="stylesheet" href="./css/button.css">
+  </head>
+  <body>
+    <div class = "container">
+      <h1> Debayering </h1>
+      <button class="button" id = "toggle_play">Pause</button>
+      <div>
+      <h3>File: </h3> <h3 id=file-status></h3>
+      <progress id="file-progress" value=0 max=1 />
+      </div>
+
+      <div>
+      <h3>Frame: </h3><h3 id=frame-status></h3>
+      <progress id="frame-progress" value=0 max=1 />
+      </div>
+    </div>
+    <script src="./debayer_renderer.js"></script>
+  </body>
+</html>
