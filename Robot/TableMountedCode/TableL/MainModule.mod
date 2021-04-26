@@ -9,7 +9,6 @@
     ENDPROC
 
     PROC Main()
-
         runall;
     ENDPROC
 
@@ -23,7 +22,7 @@
 
     PROC MoveToDist(num dist,num h,\speeddata sp, PERS wobjdata wobjHeart)
         !   VAR robtarget position := [[0,0,0],[0.0,0.0,0.7071,-0.7071],[1,1,0,4],[143.284,9E+09,9E+09,9E+09,9E+09,9E+09]];
-        VAR robtarget position:=[[0,0,0],[0.5,0.5,0.5,0.5],[1,-2,0,0],[-163.142,9E+09,9E+09,9E+09,9E+09,9E+09]];
+        VAR robtarget position:=[[0,0,0],[0.5,-0.5,0.5,-0.5],[1,-2,0,0],[165.142,9E+09,9E+09,9E+09,9E+09,9E+09]];
         VAR num angle;
         VAR num halfdist;
         VAR num rads;
@@ -37,7 +36,7 @@
         y:=h*sin(angle);
         zh:=h*cos(angle);
 
-        position.trans:=[x,-y,zh];
+        position.trans:=[x,y,zh];
         IF Present(sp) THEN
             speed:=sp;
         ENDIF

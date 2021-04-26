@@ -2,10 +2,11 @@ MODULE MainModule
 
     
 
+    
 
         VAR syncident synco;
 PROC Main()
-        runall;
+     runall;
     ENDPROC
 
     PROC goToCalibPos()
@@ -22,7 +23,7 @@ PROC Main()
 
 
     PROC MoveToDist(num dist,num h\speeddata sp, PERS wobjdata wobjHeart)
-        VAR robtarget position:=[[365,-10,1000],[0.5,0.5,0.5,0.5],[1,-2,-2,4],[165,9E+09,9E+09,9E+09,9E+09,9E+09]];
+        VAR robtarget position:=[[365,-10,1000],[0.5,-0.5,0.5,-0.5],[1,-2,-2,4],[-165,9E+09,9E+09,9E+09,9E+09,9E+09]];
         VAR num angle;
         VAR num halfdist;
         VAR num rads;
@@ -37,7 +38,7 @@ PROC Main()
         y:=h*sin(angle);
         zh:=h*cos(angle);
 
-        position.trans:=[x,y,zh];
+        position.trans:=[x,-y,zh];
         IF Present(sp) THEN
             speed:=sp;
         ENDIF

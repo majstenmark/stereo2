@@ -12,15 +12,16 @@ MODULE Data
     
     !Data for the experiment
     VAR num distances{20}:=[50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240];
+    
     PERS num nWaittime:=5;
-    PERS wobjdata wobjHeart:=[FALSE,TRUE,"",[[0,0,1550],[0,0,1,0]],[[0,0,0],[1,0,0,0]]];
+    PERS wobjdata wobjHeart:=[FALSE,TRUE,"",[[0,0,-900],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
     PERS speeddata speedSlow:=[50,50,5000,5000];
     PERS num nRadius{2}:=[1100, 1400];
-    PERS pos convergencePos{2} := [[0, 0, 0], [0, 0, 300]]; !z will be added to this position!
+    PERS pos convergencePos{2} := [[0, 0, 0], [0, 0, -300]]; !z will be added to this position!
 
     !Adjusting the x and z position of the convergence points.
     PERS num x:= 456;
-    PERS num z:= 1550;
+    PERS num z:= -600; !1550;
     
     
     
@@ -29,7 +30,7 @@ MODULE Data
     VAR syncident syncpoint;
     
     !The Stereo2 app reads this status message and displays it on the Flexpendant.
-    PERS string myStatus:="Dist 50 h = 1100";
+    PERS string myStatus:="Dist 240 h = 1400";
     
     
     !For moving into a raised position and to resting aka 'bat' position
