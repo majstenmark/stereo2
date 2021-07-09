@@ -53,6 +53,8 @@ def fix_cols(img):
 
 f = open('LUT/table.data', 'w')
 for r in range(256):
+    if r%10 == 0:
+        print('[Building LUT]: {}/256'.format(r))
     img = np.zeros((256, 256, 3), dtype=np.uint8)
     for g in range(256):
         for b in range(256):
@@ -60,7 +62,6 @@ for r in range(256):
             img[g, b, 1] = np.uint8(g)
             img[g, b, 2] = np.uint8(r)
     conv = fix_cols(img)
-    print(r)
     sys.stdout.flush()
     out = []
     for g in range(256):
