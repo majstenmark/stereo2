@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron ."
   },
-
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/majstenmark/stereo2.git"
@@ -18,7 +17,6 @@
     "jquery": "^3.4.1",
     "@rauschma/stringio": "1.4.0"
   },
-
   "author": "Maj Stenmark",
   "license": "GNU GPLv3"
 }
